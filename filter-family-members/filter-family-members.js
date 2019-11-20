@@ -50,7 +50,21 @@
 
 
 
-var filterFamilyMembers = function (familyTree, truthTest) {
-  // All your code in this function body
-};
+var filterFamilyMembers = function (familyTree) {
+  	let arr = [];
+	function truthTest(maybeTruth){
 
+	if(maybeTruth.truthTest === true) {
+	
+	return true}
+
+	}
+
+  	for (var i = 0; i < familyTree.length; i++) {
+  		if (truthTest(familyTree[i]) === true) {
+  			arr.push(familyTree[i]['firstName'] + ' ' + familyTree[i]['lastName'])
+  		}
+  	}
+
+  return arr
+};
